@@ -1,0 +1,32 @@
+{% load widget_tweaks staticfiles i18n thumbnail %}
+
+<div class="uk-margin-medium-bottom address">
+    <i class="fa fa-map-marker fa-1x" aria-hidden="true"></i>
+    <p> {% trans 'Кыргызская Республика, г.Бишкек,ул. Ибраимова 115 А, Бизнес центр «Дордой Плаза» 2 этаж.' %}</p>
+</div>
+
+<div class="uk-margin-medium-bottom phone">
+    <i class="fa fa-phone fa-1x" aria-hidden="true"></i>
+    {% for ph in number %}
+        <p>{{ ph.phone }}</p>
+    {% endfor %}
+</div>
+
+<div class="uk-margin-medium-bottom mail">
+    <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+    {#                    {% for e in mail %}#}
+    {% for mail in post %}
+        <p>{{ mail.email }}</p>
+    {% endfor %}
+    {#                    {% endfor %}#}
+
+</div>
+<div class="uk-margin-medium-bottom social">
+    <a href=""><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+    <a href=""><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+
+</div>
+<div class="uk-margin-medium-bottom mail">
+    <i class="fa fa-weixin fa-2x" aria-hidden="true" style=""><span
+        style="font-size: 16px; margin-left: 15px; color: white;">xinnuo0552588199</span></i>
+</div>

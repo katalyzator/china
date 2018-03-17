@@ -1,0 +1,23 @@
+{% load widget_tweaks thumbnail %}
+{% load staticfiles %}
+<section class="sertificate">
+    <div class="uk-container">
+        <div class="variable-width">
+            {% for sl in slider %}
+                <div class="item">
+                    <img src="{{ sl.image.url }}" alt="">
+{#                    <section id="{{ sl.id }}" class="uk-flex-top" uk-modal>#}
+{##}
+{#                        <div class="uk-modal-dialog uk-width-auto uk-margin-auto-vertical">#}
+{##}
+{#                            <button class="uk-modal-close-outside" type="button" uk-close></button>#}
+{#                            <img src="{{ sl.image.url }}" alt="">#}
+{##}
+{#                        </div>#}
+{##}
+{#                    </section>#}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

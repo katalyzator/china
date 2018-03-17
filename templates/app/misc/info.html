@@ -1,0 +1,32 @@
+{% load widget_tweaks staticfiles i18n thumbnail %}
+<section class="helpful-information" id="wayp-7">
+    <h3 class="b-b">{% trans 'Полезная информация' %}</h3>
+    <div class="uk-container" style="background-color: #f8f8f8;padding: 20px 30px;">
+
+        <div class="uk-grid-small grid-height">
+
+            {% for info in type %}
+
+                <div class="uk-grid  uk-margin-medium-top">
+                    <h4 class="uk-width-1-1" style="color: #2f6395;">{{ info.type }}</h4>
+                </div>
+                {% for step in info.steps.all %}
+                    <div class="uk-grid uk-grid-small" uk-grid>
+                        <div class="uk-width-1-2@s uk-text-left">
+                            <p>{{ step.title }}</p>
+                        </div>
+                        <div class="uk-width-1-5@s uk-text-left">
+                            <p>{{ step.phone }}</p>
+                        </div>
+                        <div class="uk-width-expand@s uk-text-center">
+                            <a href="{{ step.link }}">{{ step.link }}</a>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endfor %}
+
+
+        </div>
+    </div>
+</section>
+

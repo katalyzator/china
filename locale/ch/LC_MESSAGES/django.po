@@ -1,0 +1,201 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#: .\main\models.py:62
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-10-02 15:45+0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: .\main\models.py:13 .\main\models.py:27 .\main\models.py:77
+#: .\main\models.py:89
+msgid "Описание"
+msgstr "的描述"
+
+#: .\main\models.py:14 .\main\models.py:29 .\main\models.py:49
+#: .\main\models.py:63
+msgid "Изображение"
+msgstr "图像图像"
+
+#: .\main\models.py:21
+msgid "Баннер"
+msgstr "旗帜"
+
+#: .\main\models.py:22
+msgid "Баннеры"
+msgstr "横幅"
+
+#: .\main\models.py:26 .\main\models.py:76 .\main\models.py:90
+msgid "Название"
+msgstr "名"
+
+#: .\main\models.py:28
+msgid "иконка"
+msgstr "图标"
+
+#: .\main\models.py:30
+msgid "Cсылка"
+msgstr "链接"
+
+#: .\main\models.py:37
+msgid "услугу"
+msgstr "服务"
+
+#: .\main\models.py:38
+msgid "услуги"
+msgstr "服务"
+
+#: .\main\models.py:42
+msgid "Статус"
+msgstr "状态"
+
+#: .\main\models.py:46 .\main\models.py:102
+#: .\templates\app\misc\contacts.html:18
+msgid "Имя"
+msgstr "姓名"
+
+#: .\main\models.py:47
+msgid "status_members"
+msgstr ""
+
+#: .\main\models.py:48 .\main\models.py:61
+msgid "Краткое описание"
+msgstr "简短描述"
+
+#: .\main\models.py:56
+msgid "партнера"
+msgstr "伙伴"
+
+#: .\main\models.py:57
+msgid "команда"
+msgstr "团队"
+
+#: .\main\models.py:64
+msgid "Дата"
+msgstr "日期"
+
+#: .\main\models.py:71
+msgid "новость"
+msgstr "新闻"
+
+#: .\main\models.py:72
+msgid "новости"
+msgstr "新闻"
+
+#: .\main\models.py:84 .\main\models.py:85
+msgid "о нас"
+msgstr "关于我们"
+
+#: .\main\models.py:97
+msgid "информацию"
+msgstr "信息"
+
+#: .\main\models.py:98
+msgid "информация"
+msgstr "信息"
+
+#: .\main\models.py:103
+msgid "E-mail"
+msgstr "邮箱"
+
+#: .\main\models.py:104
+msgid "НОмер телефона"
+msgstr "电话"
+
+#: .\main\models.py:114
+msgid "контакт"
+msgstr "用户"
+
+#: .\main\models.py:115
+msgid "контакты"
+msgstr "用户"
+
+#: .\templates\app\index.html:13 .\templates\app\index.html:41
+#: .\templates\app\index.html:69
+msgid "Главная"
+msgstr "首页"
+
+#: .\templates\app\index.html:42 .\templates\app\index.html:70
+msgid "О нас"
+msgstr "关于我们"
+
+#: .\templates\app\index.html:43 .\templates\app\index.html:71
+#: .\templates\app\index.html:121
+msgid "Услуги"
+msgstr "服务内容"
+
+#: .\templates\app\index.html:44 .\templates\app\index.html:72
+#: .\templates\app\index.html:147
+msgid "Команда"
+msgstr "公司团队"
+
+#: .\templates\app\index.html:45 .\templates\app\index.html:73
+#: .\templates\app\index.html:175
+msgid "Новости"
+msgstr "最新动态"
+
+#: .\templates\app\index.html:46 .\templates\app\index.html:74
+msgid "Контакты"
+msgstr "联系我们"
+
+#: .\templates\app\index.html:47 .\templates\app\index.html:75
+msgid "Полезная информация"
+msgstr "实用信息"
+
+#: .\templates\app\index.html:48 .\templates\app\index.html:76
+msgid "Регистрация переводчиков"
+msgstr "翻译人才注册"
+
+#: .\templates\app\index.html:201
+msgid "ПОКАЗАТЬ ЕЩЕ"
+msgstr "显示更多"
+
+#: .\templates\app\index.html:213
+msgid "ПОЛЕЗНАЯ ИНФОРМАЦИЯ"
+msgstr "实用信息"
+
+#: .\templates\app\misc\contacts.html:4
+msgid "КОНТАКТЫ"
+msgstr "联系我们"
+
+#: .\templates\app\misc\contacts.html:13
+msgid "Вы можете связаться с нами заполнив форму"
+msgstr "如果您有疑问，可按下表填写联系方式及问题，我们会尽快与您联系："
+
+#: .\templates\app\misc\contacts.html:27
+msgid "Ваш E-mail"
+msgstr "邮箱"
+
+#: .\templates\app\misc\contacts.html:34
+msgid "Телефон"
+msgstr "电话"
+
+#: .\templates\app\misc\contacts.html:41
+msgid "Ваше сообщение..."
+msgstr "留言..."
+
+#: .\templates\app\misc\contacts.html:47
+msgid "Отправить"
+msgstr "发送"
+
+#: .\templates\app\misc\contacts.html:58
+msgid "Спасибо ваша заявка отправлена !"
+msgstr "发送成功！"
+
+msgid "CH"
+msgstr "中文"
+
+#: .\templates\app\misc\contacts.html:63
+msgid "Кыргызская Республика, г.Бишкек,ул. Ибраимова 115 А, Бизнес центр «Дордой Плаза» 2 этаж."
+msgstr "吉尔吉斯共和国，比什凯克市，伊布拉伊莫哇路115A，DORDOI PLAZA商务中心二楼"

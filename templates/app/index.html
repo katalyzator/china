@@ -1,0 +1,354 @@
+{% load staticfiles i18n thumbnail %}
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:image" content="path/to/image.jpg">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <title>{% trans 'Главная' %}</title>
+    {#    <link rel="shortcut icon" href="{% static 'img/favicon/favicon.ico' %}" type="image/x-icon">#}
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/slyles.css' %}">
+</head>
+
+<!--
+&&&&&&&&&&&&&&&&&&&&&&
+Project By SunRise
+&&&&&&&&&&&&&&&&&&&&&&
+ -->
+
+<body id="wayp-1">
+<div class="uk-offcanvas-content">
+    <header uk-sticky="top: 500; animation: uk-animation-slide-top; bottom: #sticky-on-scroll-up" class="">
+        <a class="uk-hidden@l uk-navbar-left uk-float-left uk-padding-small uk-logo" href="/">
+                    <img src="{% static 'img/logo.png' %}" alt="" width="198" height="43">
+                </a>
+        <button class="mobile-button uk-button uk-button-default uk-hidden@l" style="margin: 16px;" type="button"
+                uk-toggle="target: #offcanvas-reveal">
+           <i class="fa fa-bars" aria-hidden="true"></i>
+        </button>
+        <div class="uk-container uk-padding-remove uk-visible@l">
+            <nav class="uk-navbar-container" uk-navbar>
+                <div class="uk-navbar-left">
+                    <a class="uk-navbar-item uk-padding-remove uk-logo" href="/">
+                        <img src="{% static 'img/logo.png' %}" alt="" width="198" height="43">
+                    </a>
+                    <ul class="uk-navbar-nav navigation" uk-scrollspy-nav="closest: li; scroll: true; offset: 60;">
+                        <li class=""><a href="#wayp-1">{% trans 'Главная' %}</a></li>
+                        <li class=""><a href="#wayp-2">{% trans 'О нас' %}</a></li>
+                        <li class=""><a href="#wayp-3">{% trans 'Услуги' %}</a></li>
+                        <li class=""><a href="#wayp-4">{% trans 'Команда' %}</a></li>
+                        <li class=""><a href="#wayp-5">{% trans 'Новости' %}</a></li>
+                        <li class=""><a href="#wayp-7">{% trans 'Полезная информация' %}</a></li>
+                        <li class=""><a href="#wayp-6">{% trans 'Контакты' %}</a></li>
+                        <li class=""><a
+                                href="https://goo.gl/forms/0fhWbKK1JPlVdKgM2">{% trans 'Регистрация переводчиков' %}</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="uk-navbar-right language">
+                    <ul class="uk-navbar-nav">
+                        <li value="{% url 'index' %}" id="ru" class="uk-active"><a href="/" id="ru_lang">RU</a></li>
+                        <li id="ch"><a href="/ch">中文</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <div id="offcanvas-reveal" class="mobile-nav" uk-offcanvas="mode: reveal; overlay: true">
+            <div class="uk-offcanvas-bar">
+                <button class="uk-offcanvas-close" type="button" uk-close></button>
+                <a class="uk-navbar-item uk-margin-medium-top uk-logo" href="/">
+                    <img src="{% static 'img/logo.png' %}" alt="" width="198" height="43">
+                </a>
+                <ul class="">
+                    <li class=""><a href="/">{% trans 'Главная' %}</a></li>
+                    <li class=""><a href="#wayp-2">{% trans 'О нас' %}</a></li>
+                    <li class=""><a href="#wayp-3">{% trans 'Услуги' %}</a></li>
+                    <li class=""><a href="#wayp-4">{% trans 'Команда' %}</a></li>
+                    <li class=""><a href="#wayp-5">{% trans 'Новости' %}</a></li>
+                    <li class=""><a href="#wayp-7">{% trans 'Полезная информация' %}</a></li>
+                    <li class=""><a href="#wayp-6">{% trans 'Контакты' %}</a></li>
+                    <li class=""><a
+                            href="https://goo.gl/forms/0fhWbKK1JPlVdKgM2">{% trans 'Регистрация переводчиков' %}</a>
+                    </li>
+                    <li value="{% url 'index' %}" id="ru" class="uk-active uk-margin-small-top"><a href="/" id="ru_lang">RU</a></li>
+                    <li id="ch"><a href="/ch">中文</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    {# BANNERS #}
+
+    <section class="carousel" id="wayp-1">
+
+        <div class="slick-fade-carousel">
+            {% for bn in banner %}
+                <div class="item uk-cover-container">
+                    <canvas width="100%" height="700"></canvas>
+                    <img uk-cover src="{{ bn.image.url }}" alt="">
+                    <h2 class="active">{{ bn.title|safe }}</h2>
+                </div>
+            {% endfor %}
+        </div>
+
+        <a href="#wayp-2" class="anchor" uk-scroll>
+            <img class="scroll-b" src="{% static 'img/arrow-b.svg' %}" width="40" height="20" alt="">
+        </a>
+    </section>
+
+
+    <section class="about-us tracked" id="wayp-2" offset="100">
+        <div class="uk-container">
+            <div class="uk-grid uk-flex-center uk-text-center">
+                <div class="uk-width-2-3@l">
+                    <h3 class="b-b">{% trans 'О нас' %}</h3>
+                    {% for au in about_us %}
+                        <p>{{ au.description|safe }}</p>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+    {# services #}
+
+    <section class="services" id="wayp-3">
+        <div class="uk-container">
+            <h3 class="b-b">{% trans 'Услуги' %}</h3>
+            <div class="uk-grid uk-flex-center uk-text-center uk-child-width-1-4@l uk-child-width-1-3@m uk-child-width-1-2@s ">
+                {% for sv in service %}
+                    <div class="item">
+                        {#                        <a class="uk-button uk-button-default" href="#{{ sv.id }}" uk-toggle>Open</a>#}
+                        <div class="hover-bg" uk-toggle="target: #service_{{ sv.id }}">
+                            <div class="img-wrapper">
+                                <img src="{{ sv.icon.url }}" alt="">
+                            </div>
+                            <div class="title">
+                                <p>{{ sv.title|safe }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <section id="service_{{ sv.id }}" class="uk-modal-container" uk-modal>
+
+                        <div class="uk-modal-dialog uk-modal-body">
+
+                            <button class="uk-modal-close-default" type="button" uk-close></button>
+                            <h2 class="uk-modal-title">{{ sv.title|safe }}</h2>
+                            <img src="{{ sv.image.url }}" alt="">
+                            <p>{{ sv.description|safe }}</p>
+                            {% if sv.link %}
+                            <a href="{{ sv.link }}">{{ sv.link }}</a>
+                            {% endif %}
+
+                        </div>
+
+                    </section>
+                {% endfor %}
+
+            </div>
+        </div>
+    </section>
+
+    {# MEMBERS#}
+
+
+    <section class="command" id="wayp-4">
+        <div class="uk-container">
+            <h3 class="b-b">{% trans 'Команда' %}</h3>
+            <div class="uk-flex-center  uk-text-center uk-grid uk-child-width-1-4@l uk-child-width-1-3@m uk-child-width-1-2@s "
+                 uk-grid>
+                {% for mb in members %}
+                    <div class="item">
+                        <div class="img-wrapper">
+                            <img src="{{ mb.image.url }}" alt="">
+                        </div>
+                        <h4>{{ mb.name|safe }}</h4>
+                        <h5>{{ mb.status|safe }}</h5>
+                        <p>{{ mb.short_description|safe }}</p>
+                    </div>
+                {% endfor %}
+
+            </div>
+        </div>
+    </section>
+
+    {# SERTIFICATES #}
+
+    {% include 'app/misc/sertificate.html' %}
+
+
+    {# NEWS #}
+
+
+    <section class="news" id="wayp-5">
+        <div class="uk-container">
+            <h3 class="b-b">{% trans 'Новости' %}</h3>
+            <div class="uk-margin-small-bottom uk-grid-small  uk-text-center uk-grid uk-child-width-1-4@l uk-child-width-1-3@m  uk-child-width-1-2@s uk-flex-middle"
+                 uk-grid uk-lightbox="animation: scale">
+                {% for news in news %}
+                    <div id="content" class="item cont_id_{{ news.id }}">
+                        <div class="cover uk-cover-container">
+
+                            <a class="uk-inline" href="{{ news.image.url }}"
+                               caption="<h3>{{ news.description|safe }}
+                               {% if news.link %}
+                               <span><a href='{{ news.link }}' style='font-size: 18px; padding-bottom:5px!important;'>{{ news.link }}</a>
+                               </span>
+                               {% endif %}
+                               </h3>
+
+                                <span>{{ news.date }}</span>">
+                                {% thumbnail news.image "300x300" crop="center" as im %}
+                                    <img src="{{ im.url }}" alt="">{% endthumbnail %}
+
+                                <div class="uk-padding-small uk-position-bottom uk-text-left"
+                                     style="color: #FFFFFF;">
+                                    <p>{{ news.short_description|safe }}</p>
+                                    <span>{{ news.date }}</span>
+
+                                </div>
+                            </a>
+
+                        </div>
+                    </div>
+                {% endfor %}
+                {#                {% for news in news %}#}
+                {#                    <a class="" href="#modal-full_{{ news.id }}" uk-toggle>#}
+                {#                        {% thumbnail news.image "300x300" crop="center" as im %}#}
+                {#                            <img src="{{ im.url }}" alt="">#}
+                {#                        {% endthumbnail %}#}
+                {#                    </a>#}
+                {##}
+                {#                    <div id="modal-full_{{ news.id }}" class="uk-modal-full" uk-modal>#}
+                {#                        <div class="uk-modal-dialog">#}
+                {#                            <button class="uk-modal-close-full uk-close-large" type="button" uk-close></button>#}
+                {#                            <div class="uk-grid-collapse uk-child-width-1-2@s uk-flex-middle" uk-grid>#}
+                {#                                {% thumbnail news.image "300x300" crop="center" as im %}#}
+                {#                                    <div class="uk-background-cover"#}
+                {#                                         style="background-image: url('{{ im.url }}');"#}
+                {#                                         uk-height-viewport></div>#}
+                {#                                {% endthumbnail %}#}
+                {#                                <div class="uk-padding-large">#}
+                {#                                    <h1>{{ news.short_description|safe }}</h1>#}
+                {#                                    <p>{{ news.description|safe }}</p>#}
+                {#                                </div>#}
+                {#                            </div>#}
+                {#                        </div>#}
+                {#                    </div>#}
+                {#                {% endfor %}#}
+            </div>
+            {#            {% if news.counter > 8 %}#}
+            <div class="see-more uk-text-center uk-margin-medium-top">
+                <!--прелоадер для подгрузки аяксом-->
+                <div id="load" class="uk-margin-medium-bottom uk-spinner">
+                </div>
+                <!--прелоадер для подгрузки аяксом-->
+                {#                <input type='hidden' id='pagination-id' value='{{ news.next_page_number }}'>#}
+                <a id="see-more" class="uk-button-default uk-button" href="{% url 'news_paginate' %}" data-page="1"
+                   data-page-count="{{ page_count }}">{% trans 'ПОКАЗАТЬ ЕЩЕ' %}</a>
+            </div>
+            {#            {% endif %}#}
+        </div>
+    </section>
+
+    {# INFORMATION #}
+
+{##}
+{#    <section class="helpful-information" id="wayp-7">#}
+{#        <div class="uk-container">#}
+{#            <div class="uk-grid uk-flex-center uk-text-center">#}
+{#                <div class="uk-width-2-3@l">#}
+{#                    <h3 class="b-b">{% trans 'ПОЛЕЗНАЯ ИНФОРМАЦИЯ' %}</h3>#}
+{#                    {% for info in info %}#}
+{#                        <p>{{ info.description|safe }}</p>#}
+{#                    {% endfor %}#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </section>#}
+{% include 'app/misc/info.html' %}
+
+
+    {# FOOTER WITH CONTACT FORM #}
+
+    {% include 'app/misc/contacts.html' %}
+
+    {#<div id="map"></div>#}
+    {#<style>#}
+    {# #map {#}
+    {#   width: 580px;#}
+    {#   height: 600px;#}
+    {#   background-color: grey;#}
+    {# }#}
+    {#</style>#}
+</div> <!--end uk-offcanvas-content-->
+
+
+<script src="{% static 'js/jquery/jquery.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+<script src="{% static 'js/lightgallery/lightgallery-all.js' %}"></script>
+<script src="{% static 'js/slick/slick.min.js' %}"></script>
+<script src="{% static 'js/uikit/uikit.min.js' %}"></script>
+<script src="{% static 'js/contact_form.js' %}"></script>
+<script src="{% static 'js/language.js' %}"></script>
+<script src="{% static 'js/map.js' %}"></script>
+
+
+{#<script src="{% static 'js/validation.js' %}"></script>#}
+{#<script src="{% static 'js/ajax_paginator.js' %}"></script>#}
+
+<script>
+    $(document).ready(function () {
+        $('#see-more').on('click', function (e) {
+            e.preventDefault();
+            var news_list = $('#content').parent();
+            var that = this;
+            var page = $(that).attr('data-page');
+            {#            var lightbox = UIkit.lightbox(element, { /* options */ });#}
+            page++;
+            {#            news_init();#}
+            if (parseInt(page) <= parseInt($(that).attr('data-page-count'))) {
+                $.ajax({
+                    url: $(that).attr('href') + '?page=' + page,
+                    method: 'GET',
+                    dataType: 'html',
+                    success: function (response) {
+                        $(news_list).append(response);
+                        $(that).attr('data-page', page);
+                    },
+                    error: function () {
+
+                    }
+                });
+
+            }
+        });
+
+    });
+</script>
+
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZONvX1Kn09Q-UNfmUKNHZcgOOUfli91w&callback=initMap">
+</script>
+
+{#<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>#}
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110960869-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-110960869-1');
+</script>
+</body>
+</html>

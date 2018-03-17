@@ -1,0 +1,210 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#: .\main\models.py:62
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-10-02 15:33+0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: .\main\models.py:13 .\main\models.py:27 .\main\models.py:77
+#: .\main\models.py:89
+msgid "Описание"
+msgstr ""
+
+#: .\main\models.py:14 .\main\models.py:29 .\main\models.py:49
+#: .\main\models.py:63
+msgid "Изображение"
+msgstr ""
+
+#: .\main\models.py:21
+msgid "Баннер"
+msgstr ""
+
+#: .\main\models.py:22
+msgid "Баннеры"
+msgstr ""
+
+#: .\main\models.py:26 .\main\models.py:76 .\main\models.py:90
+msgid "Название"
+msgstr ""
+
+#: .\main\models.py:28
+msgid "иконка"
+msgstr ""
+
+#: .\main\models.py:30
+msgid "Cсылка"
+msgstr ""
+
+#: .\main\models.py:37
+msgid "услугу"
+msgstr ""
+
+#: .\main\models.py:38
+msgid "услуги"
+msgstr ""
+
+#: .\main\models.py:42
+msgid "Статус"
+msgstr ""
+
+#: .\main\models.py:46 .\main\models.py:102
+#: .\templates\app\misc\contacts.html:18
+msgid "Имя"
+msgstr ""
+
+#: .\main\models.py:47
+msgid "status_members"
+msgstr ""
+
+#: .\main\models.py:48 .\main\models.py:61
+msgid "Краткое описание"
+msgstr ""
+
+#: .\main\models.py:56
+msgid "партнера"
+msgstr ""
+
+#: .\main\models.py:57
+msgid "команда"
+msgstr ""
+
+#: .\main\models.py:64
+msgid "Дата"
+msgstr ""
+
+#: .\main\models.py:71
+msgid "новость"
+msgstr ""
+
+#: .\main\models.py:72
+msgid "новости"
+msgstr ""
+
+#: .\main\models.py:84 .\main\models.py:85
+msgid "о нас"
+msgstr ""
+
+#: .\main\models.py:97
+msgid "информацию"
+msgstr ""
+
+#: .\main\models.py:98
+msgid "информация"
+msgstr ""
+
+#: .\main\models.py:103
+msgid "E-mail"
+msgstr ""
+
+#: .\main\models.py:104
+msgid "НОмер телефона"
+msgstr ""
+
+#: .\main\models.py:114
+msgid "контакт"
+msgstr ""
+
+#: .\main\models.py:115
+msgid "контакты"
+msgstr ""
+
+#: .\templates\app\index.html:13
+msgid "Главная"
+msgstr ""
+
+#: .\templates\app\index.html:41 .\templates\app\index.html:69
+msgid "main"
+msgstr ""
+
+#: .\templates\app\index.html:42
+msgid "check"
+msgstr ""
+
+#: .\templates\app\index.html:43 .\templates\app\index.html:71
+#: .\templates\app\index.html:121
+msgid "Услуги"
+msgstr ""
+
+#: .\templates\app\index.html:44 .\templates\app\index.html:72
+#: .\templates\app\index.html:147
+msgid "Команда"
+msgstr ""
+
+#: .\templates\app\index.html:45 .\templates\app\index.html:73
+#: .\templates\app\index.html:175
+msgid "Новости"
+msgstr ""
+
+#: .\templates\app\index.html:46 .\templates\app\index.html:74
+msgid "Контакты"
+msgstr ""
+
+#: .\templates\app\index.html:47 .\templates\app\index.html:75
+msgid "Полезная информация"
+msgstr ""
+
+#: .\templates\app\index.html:48 .\templates\app\index.html:76
+msgid "Регистрация переводчиков"
+msgstr ""
+
+#: .\templates\app\index.html:70
+msgid "О нас"
+msgstr ""
+
+#: .\templates\app\index.html:201
+msgid "ПОКАЗАТЬ ЕЩЕ"
+msgstr ""
+
+#: .\templates\app\index.html:213
+msgid "ПОЛЕЗНАЯ ИНФОРМАЦИЯ"
+msgstr ""
+
+#: .\templates\app\misc\contacts.html:4
+msgid "КОНТАКТЫ"
+msgstr ""
+
+#: .\templates\app\misc\contacts.html:13
+msgid "Вы можете связаться с нами заполнив форму"
+msgstr ""
+
+#: .\templates\app\misc\contacts.html:27
+msgid "Ваш E-mail"
+msgstr ""
+
+#: .\templates\app\misc\contacts.html:34
+msgid "Телефон"
+msgstr ""
+
+#: .\templates\app\misc\contacts.html:41
+msgid "Ваше сообщение..."
+msgstr ""
+
+#: .\templates\app\misc\contacts.html:47
+msgid "Отправить"
+msgstr ""
+
+#: .\templates\app\misc\contacts.html:58
+msgid "Спасибо ваша заявка отправлена !"
+msgstr ""
+
+#: .\templates\app\misc\contacts.html:63
+msgid ""
+"Кыргызская Республика, г.Бишкек,ул. Ибраимова 115 А, Бизнес центр «Дордой "
+"Плаза» 2 этаж."
+msgstr ""

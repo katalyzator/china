@@ -1,0 +1,65 @@
+{% load staticfiles i18n thumbnail %}
+{#{% for news in news %}#}
+{#    <a class="" href="#modal-full_{{ news.id }}" uk-toggle>#}
+{#        {% thumbnail news.image "300x300" crop="center" as im %}#}
+{#            <img src="{{ im.url }}" alt="">#}
+{#        {% endthumbnail %}#}
+{#    </a>#}
+{#    <div id="modal-full_{{ news.id }}" class="uk-modal-full" uk-modal>#}
+{#        <div class="uk-modal-dialog">#}
+{#            <button class="uk-modal-close-full uk-close-large" type="button" uk-close></button>#}
+{#            <div class="uk-grid-collapse uk-child-width-1-2@s uk-flex-middle" uk-grid>#}
+{#                {% thumbnail news.image "960x493" crop="center" as im %}#}
+{#                <div class="uk-background-cover" style="background-image: url('{{ im.url }}');"#}
+{#                     uk-height-viewport></div>#}
+{#                 {% endthumbnail %}#}
+{#                <div class="uk-padding-large">#}
+{#                    <h1>{{ news.short_description|safe }}</h1>#}
+{#                    <p>{{ news.description|safe }}</p>#}
+{#                </div>#}
+{#            </div>#}
+{##}
+{#        </div>#}
+{#    </div>#}
+{#{% endfor %}#}
+{% for news in news %}
+    {#    <div class="item #modal-full_{{ news.id }}">#}
+    {#        <div class="cover uk-cover-container">#}
+    {#            {% thumbnail news.image "960x500" crop="center" as im %}#}
+    {#                <a class="uk-inline" href="{{ news.image.url }}"#}
+    {#                   caption="<h3>{{ news.short_description|safe }}</h3> <span>{{ news.date }}</span>">#}
+    {#                    {% thumbnail news.image "300x300" crop="center" as im %}#}
+    {#                        <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">#}
+    {#                    {% endthumbnail %}#}
+    {#                                                    <img src="{{ news.image.url }}" alt="">#}
+    {#                    <div class="uk-padding-small uk-position-bottom uk-text-left" style="color: #FFFFFF;">#}
+    {#                        <p>{{ news.description|safe }}</p>#}
+    {#                        <span>{{ news.date }}</span>#}
+    {#                    </div>#}
+    {#                </a>#}
+    {#            {% endthumbnail %}#}
+    {#        </div>#}
+    {#    </div>#}
+    <div id="content" class="item cont_id_{{ news.id }}">
+        <div class="cover uk-cover-container">
+            {% thumbnail news.image "300x300" crop="center" as im %}
+                <a class="uk-inline" href="{{ news.image.url }}"
+                   caption="<h3>{{ news.description|safe }}
+                   {% if news.link %}
+                   <span><a href='{{ news.link }}' style='font-size: 18px; padding-bottom:5px!important;'>{{ news.link }}</a>
+                   </span>
+                   {% endif %}</h3>
+                    <span>{{ news.date }}</span>">
+                    <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }} alt="">
+
+                    <div class="uk-padding-small uk-position-bottom uk-text-left"
+                         style="color: #FFFFFF;">
+                        <p>{{ news.short_description|safe }}</p>
+                        <span>{{ news.date }}</span>
+
+                    </div>
+                </a>
+            {% endthumbnail %}
+        </div>
+    </div>
+{% endfor %}

@@ -1,0 +1,1 @@
+$(document).ready(function(){var t=window.location.hash.substr(1);$("#button").each(function(){var n=$(this).attr("href");if(t==n.substr(0,n.length-5)){var o=t+".html #content";$("#content").load(o)}})});

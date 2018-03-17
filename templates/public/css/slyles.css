@@ -1,0 +1,41 @@
+.phone {
+    float: left;
+    max-width: 230px;
+    width: 100%;
+}
+
+.mail {
+    float: left;
+    max-width: 185px;
+    width: 100%;
+    margin-bottom: 35px !important;
+
+}
+
+.social {
+    float: left;
+    max-width: 260px;
+    width: 100%;
+
+}
+
+#load {
+    display: none;
+}
+
+h3.b-b {
+    font: 19px ProximaNova-Regular;
+}
+
+.services .item .title p{
+    font: 17px ProximaNova-Regular;
+}
+
+/*.services .item .hover-bg:hover{*/
+    /*background-color: #EAEAEA;*/
+/*}*/
+
+.helpful-information .grid-height {
+    height: 520px;
+    overflow-y: auto;
+}

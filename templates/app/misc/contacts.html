@@ -1,0 +1,68 @@
+{% load widget_tweaks staticfiles i18n thumbnail %}
+<footer id="wayp-6">
+    <div class="uk-container">
+        <h3 class="b-b">{% trans 'КОНТАКТЫ' %}</h3>
+        <div class="uk-grid uk-margin-large-top uk-child-width-1-2@l uk-child-width-1-2@m" uk-grid>
+            <div class="item maps">
+                <div id="map" style="border:0; width: 100%; height: 600px"></div>
+            </div>
+            <div class="item">
+                <form id="contact" action="{% url 'feedback' %}" method="POST" name="">
+                    <fieldset class="uk-fieldset">
+                        <legend class="uk-legend">{% trans 'Вы можете связаться с нами заполнив форму' %}</legend>
+                        <div class="uk-margin">
+                            <div class="uk-inline">
+                                {#                                uk-form-danger#}
+                                <span class="uk-form-icon uk-form-icon-flip"
+                                      uk-icon="icon: close"></span>
+                                {% trans 'Имя' as name %}
+                                {% render_field form.name placeholder=name required='required' class="uk-input" %}
+                                {#                                <input class="uk-input uk-form-danger" type="text" placeholder="Имя" required>#}
+                            </div>
+                        </div>
+                        <div class="uk-margin">
+                            <div class="uk-inline ">
+                                {#                                uk-form-success#}
+                                <span class="uk-form-icon uk-form-icon-flip "
+                                      uk-icon="icon: check"></span>
+                                {% trans 'Ваш E-mail' as email %}
+                                {#                                <input class="uk-input uk-form-success" type="email" placeholder="E-mail" required>#}
+                                {% render_field form.email placeholder=email required='required' class="uk-input" %}
+                            </div>
+                        </div>
+                        <div class="uk-margin">
+                            <div class="uk-inline">
+                                {% trans 'Телефон' as phone %}
+                                {% render_field form.phone placeholder=phone required='required' class+="uk-input" %}
+                                {#                                <input class="uk-input" type="number" placeholder="Телефон" required>#}
+                            </div>
+                        </div>
+                        <div class="uk-margin">
+                            <div class="uk-inline" style="display: inline-grid">
+                                {% trans 'Ваше сообщение...' as comment %}
+                                {% render_field form.comment placeholder=comment class="uk-textarea" %}
+                                {#                                <textarea class="uk-textarea" rows="5" placeholder="Ваше сообщение..."></textarea>#}
+                                {% csrf_token %}
+                            </div>
+                        </div>
+                        <button class="uk-button uk-button-default"
+                                style="margin-bottom: 70px">{% trans 'Отправить' %}</button>
+                    </fieldset>
+                </form>
+                <!--прелоадер для отправки аяксом-->
+                {#                <div class="uk-display-block uk-text-center uk-margin-medium-top uk-margin-medium-bottom"#}
+                {#                     uk-spinner="ratio: 3"></div>#}
+                <!--прелоадер для отправки аяксом-->
+
+                <!--Успешная отправка-->
+                <div class="uk-hidden uk-text-center uk-margin-medium-bottom success_message">
+                  <i class="fa fa-check fa-3x uk-margin-medium-bottom" aria-hidden="true"></i>
+                    <p style="font-size: 22px">{% trans 'Спасибо ваша заявка отправлена !' %}</p>
+                </div>
+                <!--Успешная отправка-->
+
+                {% include 'app/misc/mail.html' %}
+            </div>
+        </div>
+    </div>
+</footer>

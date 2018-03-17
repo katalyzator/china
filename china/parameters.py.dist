@@ -1,0 +1,9 @@
+DB_NAME = 'china'
+DB_USER = 'root'
+DB_PASS = ''
+
+ROOT_FOLDER = 'china'
+DEBUG = True
+
+ALLOWED_HOSTS = ['*']
+

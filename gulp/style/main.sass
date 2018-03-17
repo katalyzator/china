@@ -1,0 +1,448 @@
+@import "uikit/uikit.css"
+@import "slick/slick.css"
+@import "lighgallery/lg-fb-comment-box.css"
+@import "lighgallery/lg-transitions.css"
+@import "lighgallery/lightgallery.css"
+@import "font-awesome/font-awesome.css"
+@import "fonts.sass"
+
+body
+  font-family: 'ProximaNova-Regular', sans-serif
+.mobile-button
+  border-color: transparent !important
+  color: #fff !important
+  padding: 0 10px
+h3.b-b
+  font: 16px ProximaNova-Regular
+  color: #262626
+  position: relative
+  margin-bottom: 35px !important
+  padding-bottom: 7px
+  text-transform: uppercase
+  text-align: center
+  &:before
+    position: absolute
+    bottom: 0
+    left: 50%
+    height: 3px
+    width: 60px
+    margin-left: -30px
+    content: ''
+    background-color: #8ADFFF
+// -------------------------------------------
+// header
+//----------------------------------------------
+header + .uk-sticky-placeholder
+  height: 0 !important
+  margin: 0 !important
+header.uk-sticky-fixed
+  background-color: rgba(0, 0, 0, 0.5)
+header
+  position: absolute
+  top: 0
+  right: 0
+  left: 0
+  z-index: 980
+  text-align: right
+  .navigation
+    margin-left: 45px
+  .uk-navbar-container:not(.uk-navbar-transparent)
+    background-color: transparent
+  .uk-navbar-nav>li.uk-active>a, .uk-navbar-nav>li>a:active, .uk-navbar-nav>li:hover>a, .uk-navbar-nav>li:focus>a
+    color: #8ADFFF
+  .uk-navbar-nav>li>a:focus
+    color: #8ADFFF
+  .navigation.uk-navbar-nav>li.uk-active>a
+    position: relative
+    &:before
+      position: absolute
+      bottom: 20px
+      left: 0
+      right: 0
+      height: 2px
+      width: 100%
+      background-color: #8ADFFF
+      content: ''
+  .uk-navbar-nav>li>a
+    color: #fff
+    margin: 0 15px
+    padding: 0
+    text-transform: capitalize
+    font: 14px ProximaNova-Regular
+  .language
+    ul
+      li:first-child
+        position: relative
+        &:before
+          position: absolute
+          content: '/'
+          right: -2px
+          top: 50%
+          transform: translateY(-45%)
+          color: #fff
+      li
+        a
+          margin: 0
+          padding: 0 5px
+      li.uk-active
+        a
+          color: #8ADFFF
+// -------------------------------------------
+// index carousel
+//----------------------------------------------
+.carousel
+  position: relative
+  .slick-fade-carousel
+    .next
+      position: absolute
+      right: 5%
+      top: 50%
+      margin-top: -24px
+      z-index: 1
+      cursor: pointer
+      transition: 0.5s all
+      &:hover
+        transform: scale(1.4, 1.4)
+    .prev
+      position: absolute
+      left: 5%
+      top: 50%
+      margin-top: -24px
+      z-index: 1
+      cursor: pointer
+      transition: 0.5s all
+      &:hover
+        transform: scale(1.3, 1.3)
+    .item
+      outline: none !important
+      height: 700px
+      overflow: hidden
+      &:before
+        position: absolute
+        top: 0
+        bottom: 0
+        right: 0
+        left: 0
+        content: ''
+        background: -moz-linear-gradient(top, rgba(0,17,63,0.58) 0%, rgba(1,17,63,0.58) 1%, rgba(86,55,88,0.52) 100%)
+        background: -webkit-linear-gradient(top, rgba(0,17,63,0.58) 0%,rgba(1,17,63,0.58) 1%,rgba(86,55,88,0.52) 100%)
+        background: linear-gradient(to bottom, rgba(0,17,63,0.58) 0%,rgba(1,17,63,0.58) 1%,rgba(86,55,88,0.52) 100%)
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9400113f', endColorstr='#85563758',GradientType=0 )
+        z-index: 1
+      &:after
+        position: absolute
+        top: 0
+        right: 0
+        left: 0
+        height: 50%
+        content: ''
+        background: -moz-linear-gradient(top, rgba(4,11,29,0.88) 0%, rgba(0,13,46,0) 100%)
+        background: -webkit-linear-gradient(top, rgba(4,11,29,0.88) 0%,rgba(0,13,46,0) 100%)
+        background: linear-gradient(to bottom, rgba(4,11,29,0.88) 0%,rgba(0,13,46,0) 100%)
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ba040b1d', endColorstr='#00000d2e',GradientType=0 )
+        z-index: 1
+      img
+        outline: none !important
+      h2
+        position: absolute
+        left: 0
+        top: 50%
+        right: 0
+        transform: translateY(-50%)
+        text-align: center
+        font: 51px ProximaNova-Bold
+        color: #E8E8E8
+        z-index: 2
+        padding: 0 25%
+        text-transform: uppercase
+        margin: 0
+  a
+    display: inline-block
+    position: absolute
+    bottom: 40px
+    left: 50%
+    margin-left: -20px
+    z-index: 2
+    animation: float 1.5s linear infinite
+    transform-origin: 50% 50%
+  .scroll-b
+    transition: 0.5s all
+    &:hover
+      transform: scale(1.3, 1.3)
+  @keyframes float
+    0%
+      transform: translateY(0)
+    50%
+      transform: translateY(-15px)
+    100%
+      transform: translateY(0)
+// -------------------------------------------
+// about-us
+//----------------------------------------------
+.about-us
+  padding: 100px 0 0 0
+  h3
+    font: 16px ProximaNova-Regular
+    color: #262626
+  p
+    font: 14px/24px ProximaNova-Regular
+    color: #95989A
+// -------------------------------------------
+// services
+//----------------------------------------------
+.services
+  padding: 100px 0
+  .item
+    .hover-bg:hover
+      background-color: #F9F9F9
+      .img-wrapper
+        img
+          transform: scale(1.4, 1.4)
+  .item
+    .hover-bg
+      cursor: pointer
+      transition: 0.5s all
+      padding: 30px 0
+    .img-wrapper
+      width: 136px
+      height: 136px
+      border-radius: 50%
+      border: 2px solid #009FE3
+      overflow: hidden
+      position: relative
+      margin: 0 auto
+      img
+        position: absolute
+        top: -9999px
+        bottom: -9999px
+        right: -9999px
+        left: -9999px
+        margin: auto
+        display: block
+        max-width: 40%
+        transition: 0.5s all
+    .title
+      margin-top: 30px
+      p
+        margin-bottom: 0
+        height: 50px
+        overflow: hidden
+        color: #262626
+        font: 14px ProximaNova-Regular
+// -------------------------------------------
+// command
+//----------------------------------------------
+.command
+  background-color: #F8F8F8
+  padding: 100px 0
+  .item
+    .img-wrapper
+      width: 140px
+      height: 140px
+      overflow: hidden
+      border-radius: 50%
+      position: relative
+      margin: 0 auto
+      img
+        position: absolute
+        top: -9999px
+        bottom: -9999px
+        right: -9999px
+        left: -9999px
+        margin: auto
+        display: block
+        max-width: 100%
+    h4
+      color: #262626
+      font: 20px ProximaNova-Regular
+      margin-top: 40px
+    h5
+      color: #59C5EE
+      font: 12px ProximaNova-Regular
+      text-transform: uppercase
+      margin-top: 20px
+      margin-bottom: 30px
+    p
+      color: #95989A
+      font: 14px/19px ProximaNova-Regular
+      margin: 0
+// -------------------------------------------
+// sertificate
+//----------------------------------------------
+.sertificate
+  padding: 100px 0
+  .item:hover
+    transform: scale(1.1, 1.1)
+  .item
+    margin-left: 10px
+    overflow: hidden
+    position: relative
+    height: 200px
+    border: 2px solid #666
+    cursor: pointer
+    transition: 0.5s all
+    img
+      object-fit: cover
+      object-position: center
+      max-height: 100%
+  .next
+    position: absolute
+    right: -5%
+    top: 50%
+    margin-top: -24px
+    z-index: 1
+    cursor: pointer
+    transition: 0.5s all
+    &:hover
+      transform: scale(1.4, 1.4)
+  .prev
+    position: absolute
+    left: -5%
+    top: 50%
+    margin-top: -24px
+    z-index: 1
+    cursor: pointer
+    transition: 0.5s all
+    &:hover
+      transform: scale(1.3, 1.3)
+// -------------------------------------------
+// news
+//----------------------------------------------
+.lg-sub-html
+  p
+    font-family: ProximaNova-Regular
+  span
+    font-family: ProximaNova-Regular
+
+
+.news
+  padding: 100px 0 0 0
+  .item
+    .cover:hover
+      -webkit-box-shadow: 0px 5px 25px 0px rgba(156,156,156,1)
+      -moz-box-shadow: 0px 5px 25px 0px rgba(156,156,156,1)
+      box-shadow: 0px 5px 25px 0px rgba(156,156,156,1)
+    .cover
+      cursor: pointer
+      transition: 0.3s all
+      .uk-position-bottom
+        background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)
+        background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%)
+        background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%)
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 )
+        h3
+          color: #fff
+          font: 16px ProximaNova-Regular
+        span
+          color: #fff
+          font: 11px ProximaNova-Regular
+  .see-more
+    a
+      border-color: #59C5EE
+      font: 12px ProximaNova-Regular
+      border-radius: 20px
+      padding: 10px 30px
+      &:hover
+        background-color: #59C5EE
+        color: #fff
+// -------------------------------------------
+// helpful-information
+//----------------------------------------------
+.helpful-information
+  padding: 100px 0 100px 0
+  p
+    color: #95989A
+    font: 14px/24px ProximaNova-Regular
+  a
+    color: #009FE3
+    font: 14px ProximaNova-Regular
+// -------------------------------------------
+// footer
+//----------------------------------------------
+footer
+  padding: 100px 0
+  background:  url(../img/Group-205.png) 0 0 no-repeat
+  -webkit-background-size: cover
+  background-size: cover
+  background-attachment: fixed
+  h3.b-b
+    color: #fff
+  .maps
+    height: 600px
+  .uk-inline
+    width: 100%
+  .uk-input, .uk-textarea
+    border-radius: 3px
+    max-width: 100% !important
+    width: 100% !important
+    font: 14px ProximaNova-Regular
+  span.uk-form-danger
+    color: #f0506e !important
+  span.uk-form-success
+    color: #32d296 !important
+  .uk-legend
+    font: 16px/24px ProximaNova-Regular
+    color: #fff
+  .uk-button-default
+    border-radius: 3px
+    width: 100%
+    text-align: center
+    color: #fff
+    font: 16px ProximaNova-Regular
+    height: 40px
+    &:hover
+      background-color: #fff
+  .uk-spinner
+    color: #fff
+  .uk-icon + p, .uk-icon
+    color: #fff
+  .uk-margin-medium-bottom
+    position: relative
+    p
+      font: 14px/24px ProximaNova-Regular
+      color: #fff
+      margin: 0
+      a
+        font: 14px/24px ProximaNova-Regular
+        color: #fff
+    i
+      color: #8ADFFF
+  .address
+    padding-left: 30px
+    i
+      position: absolute
+      top: 4px
+      left: 0
+  .phone
+    padding-left: 30px
+    i
+      position: absolute
+      top: 4px
+      left: 0
+  .mail
+    padding-left: 30px
+    i
+      position: absolute
+      top: 4px
+      left: 0
+  .social
+    a
+      display: inline-block
+      margin-right: 20px
+      i
+        color: #fff
+        transition: 0.5s all
+      &:hover
+        i
+          color: #8ADFFF
+// -------------------------------------------
+// uk-modal-container
+//----------------------------------------------
+.uk-modal-container
+  font-family: ProximaNova-Regular
+  h1, h2, h3, h4, h5, h6, p, span, a, ul, li
+    font-family: ProximaNova-Regular
+#modal-media-image
+  img
+    width: 100%
+@import "media.sass"
