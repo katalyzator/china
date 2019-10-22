@@ -16,7 +16,7 @@ MySQL-python==1.2.5
 olefile==0.44
 patterns==0.3
 phonenumberslite==8.8.2
-Pillow==4.2.1
+Pillow==6.2.0
 pluggy==0.5.2
 polib==1.0.8
 py==1.4.34
