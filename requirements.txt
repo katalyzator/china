@@ -2,7 +2,7 @@ Babel==2.5.1
 certifi==2017.7.27.1
 chardet==3.0.4
 codegen==1.0
-Django==1.10.8
+Django==1.11.28
 django-ckeditor==5.3.0
 django-jet==1.0.6
 django-js-asset==0.1.1
