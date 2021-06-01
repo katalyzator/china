@@ -28,5 +28,5 @@ six==1.11.0
 solid-i18n==1.4.1
 sorl-thumbnail==12.3
 tox==2.9.0
-urllib3==1.22
+urllib3==1.26.5
 virtualenv==15.1.0
